@@ -261,7 +261,7 @@
     "dppsSwitcher": true,
     "spellingSwitch": true,
     "site_lang": "en",
-    "favicon": "@PROJECT_PATH@/assets/images/imageedit-1-6047913366-128x128_1.png",
+    "favicon": "@PROJECT_PATH@/assets/images/imageedit-1-6047913366-128x128_2.png",
     "gdpr": {
       "colorText": "#a7a7a7",
       "colorLink": "#149dcc",
@@ -270,7 +270,7 @@
     },
     "usedWebp": true,
     "lazyLoad": true,
-    "mbrsiteDomain": "kqw267zk5v",
+    "mbrsiteDomain": "39tn7hsanp",
     "cssOptimize": false,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
