@@ -270,7 +270,7 @@
     },
     "usedWebp": true,
     "lazyLoad": true,
-    "mbrsiteDomain": "oiwniaoi6l",
+    "mbrsiteDomain": "ynca29bgzh",
     "cssOptimize": false,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
@@ -282,7 +282,8 @@
       "currency": "USD"
     },
     "screenshot": "screenshot.png",
-    "publishChangesOnly": true
+    "publishChangesOnly": true,
+    "global_header_custom": "<script async defer src=\"https://app.visitortracking.com/assets/js/tracer.js\" > </script>\n<script>\n  function init_tracer() {\n   var tracer = new Tracer({\n    websiteId : 'aef25614-ec68-41cb-b638-12ff60ce3575',\n    async : true,\n    debug : false\n   });\n}\n</script>"
   },
   "pages": {
     "index.html": {
