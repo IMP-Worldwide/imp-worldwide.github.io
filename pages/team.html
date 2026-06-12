@@ -6,16 +6,29 @@
 <title>Our Team — Internet Media Providers</title>
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
 <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .team-card { cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .team-card:hover { transform: translateY(-3px); border-color: #16a34a; box-shadow: 0 10px 30px rgba(22, 163, 74, .15); }
+  .pro-card { cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .pro-card:hover { transform: translateY(-2px); border-color: #16a34a; box-shadow: 0 8px 22px rgba(22, 163, 74, .12); }
+  .modal-backdrop { background: rgba(0,0,0,.85); backdrop-filter: blur(6px); }
+  .modal-panel { animation: pop .25s ease-out; }
+  @keyframes pop { from { transform: scale(.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .avatar-ring { box-shadow: 0 0 0 2px #16a34a, 0 0 0 4px #18181b; }
+</style>
 </head>
 <body class="bg-black text-gray-200 font-sans">
+
 <nav class="flex items-center justify-between px-8 py-6 bg-zinc-900 border-b border-zinc-800">
   <a href="../index.html" class="flex items-center gap-3">
     <img alt="IMP" class="h-12 w-auto" src="../assets/imp-logo.png" />
-    <span class="font-bold text-xl tracking-wide">Internet Media Providers</span></a>
-  </div>
-  <div class="hidden md:flex gap-8 text-sm">
+    <span class="font-bold text-xl tracking-wide">Internet Media Providers</span>
+  </a>
+  <div class="hidden md:flex gap-8 text-sm items-center">
     <a href="industries.html" class="hover:text-green-600 transition">Industries</a>
     <a href="about.html" class="hover:text-green-600 transition">About</a>
+    <a href="team.html" class="text-green-400 font-bold">Our Team</a>
     <a href="join.html" class="bg-green-800 px-4 py-2 rounded font-bold hover:bg-green-700 transition">Join Now</a>
   </div>
 </nav>
@@ -23,62 +36,208 @@
 <section class="px-8 py-20 max-w-6xl mx-auto">
   <p class="text-green-400 text-sm font-bold tracking-widest text-center mb-3">LEADERSHIP</p>
   <h1 class="text-5xl md:text-6xl font-black text-white text-center mb-6">Our Team</h1>
-  <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">The leaders and specialists powering Internet Media Providers — a unified team across radio, television, and digital media.</p>
+  <p class="text-xl text-gray-300 text-center mb-6 max-w-3xl mx-auto">The leaders and specialists powering Internet Media Providers — a unified team across radio, television, and digital media.</p>
+  <p class="text-sm text-gray-500 text-center mb-16">Click any team member to view their full profile.</p>
 
-  <div class="grid md:grid-cols-2 gap-8 mb-16">
-    <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-      <img src="../assets/team/cleveland-rhodes.webp" alt="Cleveland Rhodes" class="w-24 h-24 rounded-full object-cover border-2 border-green-700 mb-4" />
+  <!-- LEADERSHIP -->
+  <div class="grid md:grid-cols-2 gap-8 mb-20">
+
+    <div class="team-card bg-zinc-900 p-8 rounded-lg border border-zinc-800"
+         data-name="Cleveland Rhodes" data-role="Co-Founder, President &amp; CTO"
+         data-bio="Over 30 years of IT experience and digital media broadcasting. Started his first internet radio station in 2004 as his college graduation project. Founded Internet Media Providers to transform how communities engage with digital media — building an ecosystem where every voice has a platform and every story can reach the world."
+         data-image="../assets/team/cleveland-rhodes.webp" data-initials="CR">
+      <img src="../assets/team/cleveland-rhodes.webp" alt="Cleveland Rhodes" class="w-24 h-24 rounded-full object-cover avatar-ring mb-4" loading="lazy" />
       <h3 class="text-2xl font-bold text-white mb-2">Cleveland Rhodes</h3>
       <p class="text-green-400 font-bold mb-3">Co-Founder, President &amp; CTO</p>
       <p class="text-gray-300 mb-4">Over 30 years of IT experience and digital media broadcasting. Started his first internet radio station in 2004 as his college graduation project. Founded Internet Media Providers to transform how communities engage with digital media.</p>
-      <a href="https://www.linkedin.com/" class="text-green-400 hover:text-green-300 text-sm font-bold">View LinkedIn →</a>
+      <span class="text-green-400 text-sm font-bold">View Profile →</span>
     </div>
-    <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-      <img src="../assets/team/michael-van-lowe.webp" alt="Michael Van Lowe" class="w-24 h-24 rounded-full object-cover border-2 border-green-700 mb-4" />
+
+    <div class="team-card bg-zinc-900 p-8 rounded-lg border border-zinc-800"
+         data-name="Michael Van Lowe" data-role="Co-Founder &amp; Studio Owner — CTK Studios"
+         data-bio="IMP's Co-Founder and owner of CTK Studios in Federal Heights, CO. Connected to Christ the King Radio and Rocky Mountain Jazz Worldwide, bringing independent broadcasting to the Denver area and helping IMP expand its reach across Colorado's mountain region."
+         data-image="../assets/team/michael-van-lowe.webp" data-initials="MVL">
+      <img src="../assets/team/michael-van-lowe.webp" alt="Michael Van Lowe" class="w-24 h-24 rounded-full object-cover avatar-ring mb-4" loading="lazy" />
       <h3 class="text-2xl font-bold text-white mb-2">Michael Van Lowe</h3>
       <p class="text-green-400 font-bold mb-3">Co-Founder &amp; Studio Owner — CTK Studios</p>
       <p class="text-gray-300 mb-4">IMP's Co-Founder and owner of CTK Studios in Federal Heights, CO. Connected to Christ the King Radio and Rocky Mountain Jazz Worldwide, bringing independent broadcasting to the Denver area.</p>
-      <a href="https://www.linkedin.com/" class="text-green-400 hover:text-green-300 text-sm font-bold">View LinkedIn →</a>
+      <span class="text-green-400 text-sm font-bold">View Profile →</span>
     </div>
-    <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-      <img src="../assets/team/tara-evans.webp" alt="Tara Evans" class="w-24 h-24 rounded-full object-cover border-2 border-green-700 mb-4" />
+
+    <div class="team-card bg-zinc-900 p-8 rounded-lg border border-zinc-800"
+         data-name="Tara Evans" data-role="VP of Business Affairs &amp; Studio Owner — IMP-STL"
+         data-bio="25 years spanning business relations in real estate and non-profit sectors. Founder of The Covering, a faith-based nonprofit. Host of the nationally syndicated 'Men's 911' broadcast and studio owner of IMP-STL in Ferguson, MO — driving community impact through media."
+         data-image="../assets/team/tara-evans.webp" data-initials="TE">
+      <img src="../assets/team/tara-evans.webp" alt="Tara Evans" class="w-24 h-24 rounded-full object-cover avatar-ring mb-4" loading="lazy" />
       <h3 class="text-2xl font-bold text-white mb-2">Tara Evans</h3>
       <p class="text-green-400 font-bold mb-3">VP of Business Affairs &amp; Studio Owner — IMP-STL</p>
       <p class="text-gray-300 mb-4">25 years spanning business relations in real estate and non-profit sectors. Founder of The Covering, a faith-based nonprofit. Host of the nationally syndicated 'Men's 911' broadcast and studio owner of IMP-STL in Ferguson, MO.</p>
-      <a href="https://www.linkedin.com/" class="text-green-400 hover:text-green-300 text-sm font-bold">View LinkedIn →</a>
+      <span class="text-green-400 text-sm font-bold">View Profile →</span>
     </div>
-    <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-      <img src="../assets/team/donald-murphy.webp" alt="Donald Murphy" class="w-24 h-24 rounded-full object-cover border-2 border-green-700 mb-4" />
+
+    <div class="team-card bg-zinc-900 p-8 rounded-lg border border-zinc-800"
+         data-name="Donald Murphy" data-role="VP of Customer Relations"
+         data-bio="25+ years in client building and international customer relations. Founder and CEO of Project Purpose, collaborating with churches, schools, and community organizations to build ownership through education and economic empowerment — bringing deep relationship expertise to the IMP network."
+         data-image="../assets/team/donald-murphy.webp" data-initials="DM">
+      <img src="../assets/team/donald-murphy.webp" alt="Donald Murphy" class="w-24 h-24 rounded-full object-cover avatar-ring mb-4" loading="lazy" />
       <h3 class="text-2xl font-bold text-white mb-2">Donald Murphy</h3>
       <p class="text-green-400 font-bold mb-3">VP of Customer Relations</p>
       <p class="text-gray-300 mb-4">25+ years in client building and international customer relations. Founder and CEO of Project Purpose, collaborating with churches, schools, and community organizations to build ownership through education and economic empowerment.</p>
-      <a href="https://www.linkedin.com/" class="text-green-400 hover:text-green-300 text-sm font-bold">View LinkedIn →</a>
+      <span class="text-green-400 text-sm font-bold">View Profile →</span>
     </div>
-    <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-      <img src="../assets/team/cece-shatz.webp" alt="CeCe Shatz" class="w-24 h-24 rounded-full object-cover border-2 border-green-700 mb-4" />
+
+    <div class="team-card bg-zinc-900 p-8 rounded-lg border border-zinc-800"
+         data-name="CeCe Shatz" data-role="VP of Media Creation"
+         data-bio="CeCe Shatz is a dynamic force in radio and television, serving as the Doyenne of Divorce, Dating &amp; Mentor in Radio &amp; TV. She brings decades of on-air experience and a passion for empowering communities through media — creating content that connects, heals, and inspires."
+         data-image="../assets/team/cece-shatz.webp" data-initials="CS">
+      <img src="../assets/team/cece-shatz.webp" alt="CeCe Shatz" class="w-24 h-24 rounded-full object-cover avatar-ring mb-4" loading="lazy" />
       <h3 class="text-2xl font-bold text-white mb-2">CeCe Shatz</h3>
       <p class="text-green-400 font-bold mb-3">VP of Media Creation</p>
       <p class="text-gray-300 mb-4">CeCe Shatz is a dynamic force in radio and television, serving as the Doyenne of Divorce, Dating &amp; Mentor in Radio &amp; TV. She brings decades of on-air experience and a passion for empowering communities through media.</p>
-      <a href="https://www.linkedin.com/" class="text-green-400 hover:text-green-300 text-sm font-bold">View LinkedIn →</a>
+      <span class="text-green-400 text-sm font-bold">View Profile →</span>
     </div>
   </div>
 
-  <h2 class="text-3xl font-black text-white mb-8 text-center">Professional Specialists</h2>
+  <!-- PROFESSIONAL SPECIALISTS -->
+  <h2 class="text-3xl font-black text-white mb-3 text-center">Professional Specialists</h2>
+  <p class="text-sm text-gray-500 text-center mb-8">Click any specialist to view their full profile.</p>
   <div class="grid md:grid-cols-3 gap-4">
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">SR</div><h4 class="text-white font-bold">Sarina Richardson</h4><p class="text-gray-400 text-sm">Director of Audio Engineering &amp; Theatrical Consultant</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">TJH</div><h4 class="text-white font-bold">Terri Jackson Hartman</h4><p class="text-gray-400 text-sm">Director of Sales</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">YR</div><h4 class="text-white font-bold">Yahaira Rodriguez</h4><p class="text-gray-400 text-sm">International Spokesperson &amp; Cultural Director</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">CW</div><h4 class="text-white font-bold">Carolyn Wilkinson</h4><p class="text-gray-400 text-sm">Video Content Coordinator &amp; Sample Director</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">MW</div><h4 class="text-white font-bold">Marcus Washington</h4><p class="text-gray-400 text-sm">Chief Coordinator — Chief of Staff</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">IJ</div><h4 class="text-white font-bold">Imani Jackson</h4><p class="text-gray-400 text-sm">Content Creation Specialist</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">KT</div><h4 class="text-white font-bold">Kenisha Thompson</h4><p class="text-gray-400 text-sm">Marketing &amp; Acquisition Specialist</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">DM</div><h4 class="text-white font-bold">Darren McBride</h4><p class="text-gray-400 text-sm">Operations &amp; Creator Success</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">PW</div><h4 class="text-white font-bold">Phyllis Washington</h4><p class="text-gray-400 text-sm">Finance &amp; Admin</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">AB</div><h4 class="text-white font-bold">Aaliyah Brooks</h4><p class="text-gray-400 text-sm">Audience Development &amp; Retention</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">RM</div><h4 class="text-white font-bold">Rosa Medina</h4><p class="text-gray-400 text-sm">Compliance &amp; Content Moderation</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><div class="text-green-400 font-bold mb-1">TW</div><h4 class="text-white font-bold">Theodore Washington</h4><p class="text-gray-400 text-sm">Strategy &amp; Partnerships</p></div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Sarina Richardson" data-role="Director of Audio Engineering &amp; Theatrical Consultant"
+         data-bio="Leads audio engineering standards across the IMP network and serves as the organization's theatrical consultant. Sarina brings broadcast-quality audio production expertise to every studio, ensuring IMP stations sound world-class on every stream."
+         data-image="../assets/team/sarina-richardson.webp" data-initials="SR">
+      <img src="../assets/team/sarina-richardson.webp" alt="Sarina Richardson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Sarina Richardson</h4>
+        <p class="text-gray-400 text-sm">Director of Audio Engineering &amp; Theatrical Consultant</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Terri Jackson Hartman" data-role="Director of Sales"
+         data-bio="Directs the IMP sales organization across radio, TV, and digital channels. Terri builds sustainable revenue partnerships with brands, agencies, and community sponsors — connecting them with IMP's engaged audiences across 500+ stations."
+         data-image="../assets/team/terri-jackson-hartman.webp" data-initials="TJH">
+      <img src="../assets/team/terri-jackson-hartman.webp" alt="Terri Jackson Hartman" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Terri Jackson Hartman</h4>
+        <p class="text-gray-400 text-sm">Director of Sales</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Yahaira Rodriguez" data-role="International Spokesperson &amp; Cultural Director"
+         data-bio="Represents IMP on the international stage and directs cultural programming strategy. Yahaira bridges IMP's growing global audience with authentic, locally-relevant content that respects and celebrates the communities we serve."
+         data-image="../assets/team/yahaira-rodriguez.webp" data-initials="YR">
+      <img src="../assets/team/yahaira-rodriguez.webp" alt="Yahaira Rodriguez" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Yahaira Rodriguez</h4>
+        <p class="text-gray-400 text-sm">International Spokesperson &amp; Cultural Director</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Carolyn Wilkinson" data-role="Video Content Coordinator &amp; Sample Director"
+         data-bio="Coordinates video content production across the IMP TV network and directs the network's signature music sampling programs. Carolyn ensures every show meets IMP's editorial standards for production value and storytelling."
+         data-image="../assets/team/carolyn-wilkinson.webp" data-initials="CW">
+      <img src="../assets/team/carolyn-wilkinson.webp" alt="Carolyn Wilkinson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Carolyn Wilkinson</h4>
+        <p class="text-gray-400 text-sm">Video Content Coordinator &amp; Sample Director</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Marcus Washington" data-role="Chief Coordinator — Chief of Staff"
+         data-bio="Coordinates cross-functional execution across the IMP organization, ensuring every team — engineering, content, partnerships, operations — moves in lockstep. Marcus is the connective tissue that turns strategy into shipped work."
+         data-image="../assets/team/marcus-washington.webp" data-initials="MW">
+      <img src="../assets/team/marcus-washington.webp" alt="Marcus Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Marcus Washington</h4>
+        <p class="text-gray-400 text-sm">Chief Coordinator — Chief of Staff</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Imani Jackson" data-role="Content Creation Specialist"
+         data-bio="Creates original content across the IMP network — from short-form video and social clips to long-form feature stories. Imani brings fresh creative energy to the network's daily programming slate."
+         data-image="../assets/team/imani-jackson.webp" data-initials="IJ">
+      <img src="../assets/team/imani-jackson.webp" alt="Imani Jackson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Imani Jackson</h4>
+        <p class="text-gray-400 text-sm">Content Creation Specialist</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Kenisha Thompson" data-role="Marketing &amp; Acquisition Specialist"
+         data-bio="Drives listener and viewer acquisition across the IMP network. Kenisha designs and executes the campaigns that bring new audiences into our radio, TV, and digital properties — and turns them into loyal community members."
+         data-image="../assets/team/kenisha-thompson.webp" data-initials="KT">
+      <img src="../assets/team/kenisha-thompson.webp" alt="Kenisha Thompson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Kenisha Thompson</h4>
+        <p class="text-gray-400 text-sm">Marketing &amp; Acquisition Specialist</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Darren McBride" data-role="Operations &amp; Creator Success"
+         data-bio="Keeps the IMP network running smoothly day-to-day and ensures our creators have everything they need to succeed on air. Darren is the bridge between the technology platform and the people who use it."
+         data-image="../assets/team/darren-mcbride.webp" data-initials="DM">
+      <img src="../assets/team/darren-mcbride.webp" alt="Darren McBride" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Darren McBride</h4>
+        <p class="text-gray-400 text-sm">Operations &amp; Creator Success</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Phyllis Washington" data-role="Finance &amp; Admin"
+         data-bio="Manages financial operations, accounting, and administrative functions for the IMP organization. Phyllis keeps the books clean, the contracts tight, and the team paid — so the rest of IMP can focus on the mission."
+         data-image="../assets/team/phyllis-washington.webp" data-initials="PW">
+      <img src="../assets/team/phyllis-washington.webp" alt="Phyllis Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Phyllis Washington</h4>
+        <p class="text-gray-400 text-sm">Finance &amp; Admin</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Aaliyah Brooks" data-role="Audience Development &amp; Retention"
+         data-bio="Builds the systems and programs that turn first-time listeners into long-term community members. Aaliyah analyzes audience behavior, designs retention campaigns, and ensures IMP's growth compounds over time."
+         data-image="../assets/team/aaliyah-brooks.webp" data-initials="AB">
+      <img src="../assets/team/aaliyah-brooks.webp" alt="Aaliyah Brooks" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Aaliyah Brooks</h4>
+        <p class="text-gray-400 text-sm">Audience Development &amp; Retention</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Rosa Medina" data-role="Compliance &amp; Content Moderation"
+         data-bio="Ensures all IMP content meets FCC regulations, platform guidelines, and community standards. Rosa reviews programming, trains creators on compliance, and protects the network from regulatory and reputational risk."
+         data-image="../assets/team/rosa-medina.webp" data-initials="RM">
+      <img src="../assets/team/rosa-medina.webp" alt="Rosa Medina" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Rosa Medina</h4>
+        <p class="text-gray-400 text-sm">Compliance &amp; Content Moderation</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Theodore Washington" data-role="Strategy &amp; Partnerships"
+         data-bio="Develops long-term strategic partnerships that expand IMP's reach and capabilities. Theodore negotiates distribution deals, technology alliances, and content partnerships that position the network for sustained growth."
+         data-image="../assets/team/theodore-washington.webp" data-initials="TW">
+      <img src="../assets/team/theodore-washington.webp" alt="Theodore Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" />
+      <div>
+        <h4 class="text-white font-bold">Theodore Washington</h4>
+        <p class="text-gray-400 text-sm">Strategy &amp; Partnerships</p>
+      </div>
+    </div>
+
   </div>
 </section>
+
 <footer class="py-8 px-8 border-t border-zinc-800 text-center text-zinc-500 text-sm">
   <div class="flex justify-center gap-6 mb-3">
     <a href="privacy.html" class="hover:text-green-400">Privacy Policy</a>
@@ -88,5 +247,303 @@
   <p>2016–2027 © Internet Media Providers — All Rights Reserved</p>
   <p class="text-xs mt-2 text-zinc-600">A division of IMP Streams Media Productions</p>
 </footer>
+
+<!-- MODAL -->
+<div id="team-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
+  <div class="modal-panel bg-zinc-900 border border-zinc-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+    <button id="modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl leading-none w-10 h-10 flex items-center justify-center rounded-full hover:bg-zinc-800 transition" aria-label="Close">&times;</button>
+    <div class="p-8 md:p-10">
+      <div class="flex flex-col md:flex-row gap-6 items-start mb-6">
+        <img id="modal-image" src="" alt="" class="w-32 h-32 rounded-full object-cover avatar-ring flex-shrink-0" />
+        <div class="flex-1">
+          <p class="text-green-400 text-xs font-bold tracking-widest mb-2">IMP TEAM MEMBER</p>
+          <h2 id="modal-name" class="text-3xl md:text-4xl font-black text-white mb-2"></h2>
+          <p id="modal-role" class="text-green-400 font-bold text-lg"></p>
+        </div>
+      </div>
+      <div class="border-t border-zinc-800 pt-6">
+        <h3 class="text-sm font-bold text-gray-400 tracking-widest mb-3">ABOUT</h3>
+        <p id="modal-bio" class="text-gray-200 text-base leading-relaxed"></p>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="contact.html" class="bg-green-700 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition">Get In Touch</a>
+        <a href="../index.html" class="bg-zinc-800 hover:bg-zinc-700 text-white font-bold px-6 py-3 rounded-lg transition">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const modal = document.getElementById('team-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalName = document.getElementById('modal-name');
+    const modalRole = document.getElementById('modal-role');
+    const modalBio = document.getElementById('modal-bio');
+    const closeBtn = document.getElementById('modal-close');
+
+    function openModal(card) {
+      const name = card.getAttribute('data-name') || '';
+      const role = card.getAttribute('data-role') || '';
+      const bio = card.getAttribute('data-bio') || '';
+      const image = card.getAttribute('data-image') || '';
+      const initials = card.getAttribute('data-initials') || '';
+
+      modalName.textContent = name;
+      modalRole.textContent = role;
+      modalBio.textContent = bio;
+      if (image) {
+        modalImage.src = image;
+        modalImage.alt = name;
+        modalImage.style.display = '';
+      } else {
+        modalImage.style.display = 'none';
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.team-card, .pro-card').forEach(function(card) {
+      card.addEventListener('click', function() { openModal(card); });
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
+      });
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', 'View profile for ' + (card.getAttribute('data-name') || 'team member'));
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+  })();
+</script>
+
+</body>
+</html>
+ PROFESSIONAL SPECIALISTS -->
+  <h2 class="text-3xl font-black text-white mb-3 text-center">Professional Specialists</h2>
+  <p class="text-sm text-gray-500 text-center mb-10">Click any specialist to view their full profile.</p>
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Sarina Richardson" data-role="Director of Audio Engineering &amp; Theatrical Consultant"
+         data-bio="Sarina Richardson directs audio engineering operations and theatrical production for IMP, ensuring every broadcast meets the highest production standards. Her dual expertise in audio engineering and theatrical consulting brings a refined showmanship to live and recorded programming across the network."
+         data-image="../assets/team/sarina-richardson.webp" data-initials="SR">
+      <img src="../assets/team/sarina-richardson.webp" alt="Sarina Richardson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>SR</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Sarina Richardson</h4>
+        <p class="text-gray-400 text-sm">Director of Audio Engineering &amp; Theatrical Consultant</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Terri Jackson Hartman" data-role="Director of Sales"
+         data-bio="Terri Jackson Hartman leads sales strategy and partnership development for IMP, connecting creators, advertisers, and platform partners with the right opportunities. With a background in enterprise sales and relationship management, she drives revenue growth across radio, TV, and digital properties."
+         data-image="../assets/team/terri-jackson-hartman.webp" data-initials="TJH">
+      <img src="../assets/team/terri-jackson-hartman.webp" alt="Terri Jackson Hartman" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>TJH</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Terri Jackson Hartman</h4>
+        <p class="text-gray-400 text-sm">Director of Sales</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Yahaira Rodriguez" data-role="International Spokesperson &amp; Cultural Director"
+         data-bio="Yahaira Rodriguez serves as IMP's international spokesperson and cultural director, bridging the network with global audiences and partners. Fluent in English and Spanish, she represents IMP at international media events and curates culturally resonant programming."
+         data-image="../assets/team/yahaira-rodriguez.webp" data-initials="YR">
+      <img src="../assets/team/yahaira-rodriguez.webp" alt="Yahaira Rodriguez" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>YR</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Yahaira Rodriguez</h4>
+        <p class="text-gray-400 text-sm">International Spokesperson &amp; Cultural Director</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Carolyn Wilkinson" data-role="Video Content Coordinator &amp; Sample Director"
+         data-bio="Carolyn Wilkinson coordinates video content production and directs sampling for IMP's television and digital properties. She manages the video pipeline from shoot to publish, ensuring every piece of visual content meets brand standards and reaches its target audience."
+         data-image="../assets/team/carolyn-wilkinson.webp" data-initials="CW">
+      <img src="../assets/team/carolyn-wilkinson.webp" alt="Carolyn Wilkinson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>CW</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Carolyn Wilkinson</h4>
+        <p class="text-gray-400 text-sm">Video Content Coordinator &amp; Sample Director</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Marcus Washington" data-role="Chief Coordinator — Chief of Staff"
+         data-bio="Marcus Washington serves as Chief Coordinator and Chief of Staff, ensuring cross-functional alignment across IMP's leadership team. He manages strategic initiatives, internal operations, and executive scheduling — keeping the team focused on mission-critical priorities."
+         data-image="../assets/team/marcus-washington.webp" data-initials="MW">
+      <img src="../assets/team/marcus-washington.webp" alt="Marcus Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>MW</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Marcus Washington</h4>
+        <p class="text-gray-400 text-sm">Chief Coordinator — Chief of Staff</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Imani Jackson" data-role="Content Creation Specialist"
+         data-bio="Imani Jackson is a content creation specialist producing compelling written and multimedia content for IMP's radio, TV, and digital channels. Her work spans social media, editorial, and on-air scripts — turning complex stories into clear, engaging content."
+         data-image="../assets/team/imani-jackson.webp" data-initials="IJ">
+      <img src="../assets/team/imani-jackson.webp" alt="Imani Jackson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>IJ</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Imani Jackson</h4>
+        <p class="text-gray-400 text-sm">Content Creation Specialist</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Kenisha Thompson" data-role="Marketing &amp; Acquisition Specialist"
+         data-bio="Kenisha Thompson drives marketing strategy and audience acquisition for IMP, identifying high-value channels and campaigns that grow the network's reach. She combines data analysis with creative storytelling to attract and convert new listeners, viewers, and partners."
+         data-image="../assets/team/kenisha-thompson.webp" data-initials="KT">
+      <img src="../assets/team/kenisha-thompson.webp" alt="Kenisha Thompson" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>KT</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Kenisha Thompson</h4>
+        <p class="text-gray-400 text-sm">Marketing &amp; Acquisition Specialist</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Darren McBride" data-role="Operations &amp; Creator Success"
+         data-bio="Darren McBride leads operations and creator success at IMP, ensuring every broadcaster, host, and content creator has the tools, training, and support they need to thrive on the network. He streamlines onboarding, technical setup, and ongoing performance coaching."
+         data-image="../assets/team/darren-mcbride.webp" data-initials="DM">
+      <img src="../assets/team/darren-mcbride.webp" alt="Darren McBride" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>DM</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Darren McBride</h4>
+        <p class="text-gray-400 text-sm">Operations &amp; Creator Success</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Phyllis Washington" data-role="Finance &amp; Admin"
+         data-bio="Phyllis Washington manages finance and administration for IMP, overseeing budgeting, accounts, compliance filings, and operational logistics. Her steady financial stewardship keeps the network's books clean and the organization ready for sustainable growth."
+         data-image="../assets/team/phyllis-washington.webp" data-initials="PW">
+      <img src="../assets/team/phyllis-washington.webp" alt="Phyllis Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>PW</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Phyllis Washington</h4>
+        <p class="text-gray-400 text-sm">Finance &amp; Admin</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Aaliyah Brooks" data-role="Audience Development &amp; Retention"
+         data-bio="Aaliyah Brooks focuses on audience development and retention, building the systems and campaigns that turn first-time listeners and viewers into loyal, engaged community members. She blends analytics, CRM, and creative engagement to keep IMP's audiences growing."
+         data-image="../assets/team/aaliyah-brooks.webp" data-initials="AB">
+      <img src="../assets/team/aaliyah-brooks.webp" alt="Aaliyah Brooks" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>AB</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Aaliyah Brooks</h4>
+        <p class="text-gray-400 text-sm">Audience Development &amp; Retention</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Rosa Medina" data-role="Compliance &amp; Content Moderation"
+         data-bio="Rosa Medina leads compliance and content moderation across IMP's properties, ensuring all programming meets FCC requirements, advertising standards, and community guidelines. She reviews content, advises on policy, and protects the network's reputation."
+         data-image="../assets/team/rosa-medina.webp" data-initials="RM">
+      <img src="../assets/team/rosa-medina.webp" alt="Rosa Medina" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>RM</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Rosa Medina</h4>
+        <p class="text-gray-400 text-sm">Compliance &amp; Content Moderation</p>
+      </div>
+    </div>
+
+    <div class="pro-card bg-zinc-900 p-5 rounded-lg border border-zinc-800 flex items-center gap-4"
+         data-name="Theodore Washington" data-role="Strategy &amp; Partnerships"
+         data-bio="Theodore Washington leads strategy and partnerships at IMP, identifying high-impact collaborations, distribution deals, and growth opportunities. With decades of executive experience, he opens doors that move the network forward and align with IMP's long-term mission."
+         data-image="../assets/team/theodore-washington.webp" data-initials="TW">
+      <img src="../assets/team/theodore-washington.webp" alt="Theodore Washington" class="w-16 h-16 rounded-full object-cover avatar-ring flex-shrink-0" loading="lazy" onerror="this.outerHTML='<div class=&quot;w-16 h-16 rounded-full bg-green-900 flex items-center justify-center text-white font-bold flex-shrink-0 avatar-ring&quot;>TW</div>'" />
+      <div>
+        <h4 class="text-white font-bold">Theodore Washington</h4>
+        <p class="text-gray-400 text-sm">Strategy &amp; Partnerships</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="profileModal" class="hidden fixed inset-0 z-50 modal-backdrop items-center justify-center p-4" role="dialog" aria-modal="true">
+  <div class="modal-panel bg-zinc-900 border-2 border-green-700 rounded-2xl max-w-2xl w-full p-8 relative max-h-[90vh] overflow-y-auto">
+    <button id="modalClose" aria-label="Close" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl leading-none w-10 h-10 flex items-center justify-center rounded-full hover:bg-zinc-800 transition">&times;</button>
+    <div class="flex flex-col md:flex-row gap-6 items-start">
+      <img id="modalImage" src="" alt="" class="w-32 h-32 rounded-full object-cover avatar-ring flex-shrink-0" />
+      <div class="flex-1">
+        <p class="text-green-400 text-xs font-bold tracking-widest mb-1">IMP TEAM MEMBER</p>
+        <h2 id="modalName" class="text-3xl font-black text-white mb-2"></h2>
+        <p id="modalRole" class="text-green-400 font-bold text-lg mb-4"></p>
+        <p id="modalBio" class="text-gray-300 leading-relaxed"></p>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="inline-block mt-6 bg-green-700 hover:bg-green-600 text-white font-bold px-5 py-2 rounded transition">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-8 px-8 border-t border-zinc-800 text-center text-zinc-500 text-sm">
+  <div class="flex justify-center gap-6 mb-3">
+    <a href="privacy.html" class="hover:text-green-400">Privacy Policy</a>
+    <a href="terms.html" class="hover:text-green-400">Terms of Service</a>
+    <a href="contact.html" class="hover:text-green-400">Contact</a>
+  </div>
+  <p>2016–2027 © Internet Media Providers — All Rights Reserved</p>
+  <p class="text-xs mt-2 text-zinc-600">A division of IMP Streams Media Productions</p>
+</footer>
+
+<script>
+  (function() {
+    const modal = document.getElementById('profileModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalName = document.getElementById('modalName');
+    const modalRole = document.getElementById('modalRole');
+    const modalBio = document.getElementById('modalBio');
+    const modalClose = document.getElementById('modalClose');
+
+    function openModal(card) {
+      const name = card.getAttribute('data-name');
+      const role = card.getAttribute('data-role');
+      const bio = card.getAttribute('data-bio');
+      const image = card.getAttribute('data-image');
+      const initials = card.getAttribute('data-initials');
+
+      modalName.textContent = name;
+      modalRole.textContent = role;
+      modalBio.textContent = bio;
+
+      // Set image, with fallback to initials if image fails
+      modalImage.onerror = function() {
+        modalImage.outerHTML = '<div id="modalImage" class="w-32 h-32 rounded-full bg-green-900 flex items-center justify-center text-white text-3xl font-black avatar-ring flex-shrink-0">' + initials + '</div>';
+      };
+      modalImage.outerHTML = '<img id="modalImage" src="' + image + '" alt="' + name + '" class="w-32 h-32 rounded-full object-cover avatar-ring flex-shrink-0" onerror="this.outerHTML=\'<div class=&quot;w-32 h-32 rounded-full bg-green-900 flex items-center justify-center text-white text-3xl font-black avatar-ring flex-shrink-0&quot;>' + initials + '</div>\'" />';
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.team-card, .pro-card').forEach(function(card) {
+      card.addEventListener('click', function() { openModal(card); });
+      card.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); } });
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+  })();
+</script>
+
 </body>
 </html>
