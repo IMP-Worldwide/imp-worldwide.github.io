@@ -1,0 +1,163 @@
+/* IMP Modal Pop-up System
+   Used by: index.html, pages/industries.html, pages/team.html
+   Triggers: any element with data-modal="<id>"
+   Targets:  element with id="<id>"
+   Closes:   .imp-modal-close, click on backdrop, ESC key
+*/
+
+.imp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.imp-modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imp-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%) scale(0.95);
+  z-index: 9999;
+  width: min(680px, 92vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #0a0a0a;
+  border: 1px solid #1f3a24;
+  border-radius: 14px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(34, 197, 94, 0.15) inset;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease, visibility 0.25s ease;
+}
+.imp-modal.is-open {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.imp-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  background: #0a0a0a;
+  z-index: 1;
+}
+.imp-modal-logo {
+  height: 56px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+.imp-modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #4ade80;
+  margin: 0;
+  flex: 1;
+  margin-left: 16px;
+}
+.imp-modal-close {
+  background: transparent;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.imp-modal-close:hover,
+.imp-modal-close:focus {
+  background: #1f2937;
+  color: #fff;
+  border-color: #4ade80;
+  outline: none;
+}
+
+.imp-modal-body {
+  padding: 24px;
+  color: #d1d5db;
+  line-height: 1.65;
+}
+.imp-modal-body h4 {
+  color: #4ade80;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.imp-modal-body p { margin: 0 0 16px; }
+.imp-modal-body ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+.imp-modal-body li { margin-bottom: 6px; }
+.imp-modal-body .imp-modal-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.imp-modal-cta {
+  display: inline-block;
+  margin-top: 12px;
+  background: #15803d;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.imp-modal-cta:hover { background: #166534; }
+
+body.imp-modal-open {
+  overflow: hidden;
+}
+
+/* Network card hover effect (Industries page) */
+.imp-network-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.imp-network-card:hover,
+.imp-network-card:focus {
+  transform: translateY(-3px);
+  border-color: #4ade80 !important;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+  outline: none;
+}
+.imp-network-card .imp-card-cta {
+  color: #4ade80;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 8px;
+  display: inline-block;
+}

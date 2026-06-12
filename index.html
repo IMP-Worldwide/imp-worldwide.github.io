@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Home — Internet Media Providers</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="assets/css/imp-modal.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-gray-200 font-sans">
@@ -25,9 +26,10 @@
 </nav>
 
 <section class="relative px-8 py-24 text-center bg-gradient-to-b from-zinc-900 to-black overflow-hidden">
-  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-30">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-55">
     <source src="https://impworldwide.zo.space/videos/imp-hero.mp4" type="video/mp4" />
   </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/60 to-black"></div>
   <div class="relative z-10 max-w-5xl mx-auto">
     <p class="text-green-400 text-sm md:text-base font-bold tracking-widest mb-6">2026 — THE FUTURE OF BROADCASTING</p>
     <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-white">Your Voice.<br><span class="text-green-700">Your Network.</span><br>The World.</h1>
@@ -88,7 +90,8 @@
     <h2 class="text-4xl md:text-5xl font-black text-center mb-6 text-white">Our Built Infrastructure</h2>
     <p class="text-center text-gray-400 max-w-3xl mx-auto mb-16">Faith-based, urban, jazz, news, and country programming — IMP networks reach audiences 24/7/365 across radio, TV, and digital.</p>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
+      <button data-modal="modal-ottu-media" class="text-left bg-zinc-900 p-8 rounded-lg border border-zinc-800 hover:border-green-700 transition w-full">
+        <img src="assets/networks/ottu-media-logo.webp" alt="OTTU Media" class="h-16 w-auto mb-4 object-contain" />
         <h3 class="text-2xl font-bold mb-3 text-green-400">OTTU Media</h3>
         <p class="text-gray-300 mb-4">The unified media platform for broadcasters worldwide.</p>
         <p class="text-gray-400 mb-6">OTTU Media is IMP's flagship media platform — a centralized broadcasting hub where independent creators launch radio stations, TV channels, and podcasts with enterprise-grade tools and zero infrastructure overhead.</p>
@@ -96,8 +99,11 @@
           <div><span class="text-green-400">📡</span> 6+ stations live via AzuraCast</div>
           <div><span class="text-green-400">🎧</span> 86M+ monthly</div>
         </div>
-      </div>
-      <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
+        <span class="imp-card-cta">View Details →</span>
+      </button>
+
+      <button data-modal="modal-ottu-comms" class="text-left bg-zinc-900 p-8 rounded-lg border border-zinc-800 hover:border-green-700 transition w-full">
+        <img src="assets/networks/ottu-communications-logo.webp" alt="OTTU Communications" class="h-16 w-auto mb-4 object-contain" />
         <h3 class="text-2xl font-bold mb-3 text-green-400">OTTU Communications</h3>
         <p class="text-gray-300 mb-4">Communications infrastructure — coming soon.</p>
         <p class="text-gray-400 mb-6">OTTU Communications is the communication and messaging layer of the IMP network infrastructure. Currently in development — will enable cross-network messaging, alerts, and creator-audience engagement tools.</p>
@@ -105,8 +111,11 @@
           <div><span class="text-green-400">📡</span> In development</div>
           <div><span class="text-green-400">🎧</span> TBD</div>
         </div>
-      </div>
-      <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
+        <span class="imp-card-cta">View Details →</span>
+      </button>
+
+      <button data-modal="modal-imp-streams" class="text-left bg-zinc-900 p-8 rounded-lg border border-zinc-800 hover:border-green-700 transition w-full">
+        <img src="assets/networks/imp-streams-logo.webp" alt="IMP Streams" class="h-16 w-auto mb-4 object-contain" />
         <h3 class="text-2xl font-bold mb-3 text-green-400">IMP Streams</h3>
         <p class="text-gray-300 mb-4">IMP's proprietary streaming infrastructure — site in development.</p>
         <p class="text-gray-400 mb-6">IMP Streams is the streaming technology backbone for Internet Media Providers. This platform hosts and manages IMP's radio, TV, and podcast distribution with proprietary CDN technology.</p>
@@ -114,8 +123,11 @@
           <div><span class="text-green-400">📡</span> 500+ stations across all platforms</div>
           <div><span class="text-green-400">🎧</span> TBD</div>
         </div>
-      </div>
-      <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
+        <span class="imp-card-cta">View Details →</span>
+      </button>
+
+      <button data-modal="modal-x-cable" class="text-left bg-zinc-900 p-8 rounded-lg border border-zinc-800 hover:border-green-700 transition w-full">
+        <img src="assets/networks/x-cable-logo.webp" alt="X-Cable" class="h-16 w-auto mb-4 object-contain" />
         <h3 class="text-2xl font-bold mb-3 text-green-400">X-Cable: The Streaming Alternative</h3>
         <p class="text-gray-300 mb-4">The cable TV alternative built for the streaming era.</p>
         <p class="text-gray-400 mb-6">X-Cable is IMP's over-the-top (OTT) television network — delivering live and on-demand TV content without the need for traditional cable subscriptions. Coming Q4 2026.</p>
@@ -123,7 +135,8 @@
           <div><span class="text-green-400">📡</span> 5+ TV networks</div>
           <div><span class="text-green-400">🎧</span> TBD</div>
         </div>
-      </div>
+        <span class="imp-card-cta">View Details →</span>
+      </button>
     </div>
     <div class="text-center mt-12">
       <a href="pages/industries.html" class="text-green-400 hover:text-green-300 font-bold text-lg">View All Industries →</a>
@@ -156,5 +169,101 @@
   <p>2016–2027 © Internet Media Providers — All Rights Reserved</p>
   <p class="text-xs mt-2 text-zinc-600">A division of IMP Streams Media Productions</p>
 </footer>
+
+<!-- ============ MODAL POP-UPS ============ -->
+
+<div class="imp-modal" id="modal-ottu-media" role="dialog" aria-modal="true">
+  <div class="imp-modal-header">
+    <img src="assets/networks/ottu-media-logo.webp" alt="" class="imp-modal-logo" />
+    <h3 class="imp-modal-title">OTTU Media</h3>
+    <button class="imp-modal-close" aria-label="Close">✕</button>
+  </div>
+  <div class="imp-modal-body">
+    <span class="imp-modal-stat">🎬 Media Platform</span>
+    <span class="imp-modal-stat">📡 Flagship</span>
+    <span class="imp-modal-stat">🌍 Global</span>
+    <h4>About</h4>
+    <p>OTTU Media is IMP's flagship media platform — a unified broadcasting hub where independent creators launch radio stations, TV channels, and podcasts with enterprise-grade tools and zero infrastructure overhead.</p>
+    <h4>Capabilities</h4>
+    <ul>
+      <li>Radio &amp; TV station hosting (AzuraCast + Viloud)</li>
+      <li>Live streaming &amp; on-demand content delivery</li>
+      <li>Listener analytics &amp; monetization</li>
+      <li>Cross-network CDN distribution</li>
+    </ul>
+    <a href="https://ottu.media" target="_blank" rel="noopener" class="imp-modal-cta">Visit OTTU Media →</a>
+  </div>
+</div>
+
+<div class="imp-modal" id="modal-ottu-comms" role="dialog" aria-modal="true">
+  <div class="imp-modal-header">
+    <img src="assets/networks/ottu-communications-logo.webp" alt="" class="imp-modal-logo" />
+    <h3 class="imp-modal-title">OTTU Communications</h3>
+    <button class="imp-modal-close" aria-label="Close">✕</button>
+  </div>
+  <div class="imp-modal-body">
+    <span class="imp-modal-stat">💬 Communications</span>
+    <span class="imp-modal-stat">🛠 In Development</span>
+    <h4>About</h4>
+    <p>OTTU Communications is the messaging and engagement layer of the IMP network — connecting creators, audiences, and station operators in real time across all IMP properties.</p>
+    <h4>Planned Features</h4>
+    <ul>
+      <li>Cross-network messaging</li>
+      <li>Creator-to-audience alerts and notifications</li>
+      <li>Station operator coordination tools</li>
+      <li>Unified inbox across radio, TV, and social</li>
+    </ul>
+    <a href="contact.html" class="imp-modal-cta">Get Notified →</a>
+  </div>
+</div>
+
+<div class="imp-modal" id="modal-imp-streams" role="dialog" aria-modal="true">
+  <div class="imp-modal-header">
+    <img src="assets/networks/imp-streams-logo.webp" alt="" class="imp-modal-logo" />
+    <h3 class="imp-modal-title">IMP Streams</h3>
+    <button class="imp-modal-close" aria-label="Close">✕</button>
+  </div>
+  <div class="imp-modal-body">
+    <span class="imp-modal-stat">📡 Streaming</span>
+    <span class="imp-modal-stat">🌐 CDN</span>
+    <span class="imp-modal-stat">500+ Stations</span>
+    <h4>About</h4>
+    <p>IMP Streams is the proprietary streaming backbone of Internet Media Providers — managing radio, TV, and podcast distribution across all platforms with custom CDN technology.</p>
+    <h4>Infrastructure</h4>
+    <ul>
+      <li>500+ stations across AzuraCast, Zeno.fm, and TalkShoe</li>
+      <li>Proprietary CDN for low-latency global delivery</li>
+      <li>Multi-bitrate adaptive streaming</li>
+      <li>Real-time listener analytics</li>
+    </ul>
+    <a href="pages/industries.html" class="imp-modal-cta">Explore Networks →</a>
+  </div>
+</div>
+
+<div class="imp-modal" id="modal-x-cable" role="dialog" aria-modal="true">
+  <div class="imp-modal-header">
+    <img src="assets/networks/x-cable-logo.webp" alt="" class="imp-modal-logo" />
+    <h3 class="imp-modal-title">X-Cable: The Streaming Alternative</h3>
+    <button class="imp-modal-close" aria-label="Close">✕</button>
+  </div>
+  <div class="imp-modal-body">
+    <span class="imp-modal-stat">📺 OTT TV</span>
+    <span class="imp-modal-stat">🚀 Q4 2026</span>
+    <span class="imp-modal-stat">5+ Networks</span>
+    <h4>About</h4>
+    <p>X-Cable is IMP's over-the-top (OTT) television network — delivering live and on-demand TV content without traditional cable subscriptions. Built for the streaming era.</p>
+    <h4>Networks</h4>
+    <ul>
+      <li>Christendom Television Network</li>
+      <li>God, Family &amp; Country Television Network</li>
+      <li>REEL TV Movies and More</li>
+      <li>Valuable Television Network</li>
+      <li>Urban Core Television Network</li>
+    </ul>
+    <a href="pages/industries.html" class="imp-modal-cta">View All Networks →</a>
+  </div>
+</div>
+
+<script src="assets/js/imp-modal.js"></script>
 </body>
 </html>
