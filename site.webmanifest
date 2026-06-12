@@ -1,0 +1,17 @@
+{
+  "name": "Internet Media Providers",
+  "short_name": "IMP",
+  "description": "Radio, TV, and virtual broadcasting networks for independent creators.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#16a34a",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
