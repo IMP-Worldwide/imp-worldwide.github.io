@@ -31,7 +31,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-gray-200 font-sans">
-<nav class="flex items-center justify-between px-8 py-6 bg-zinc-900 border-b border-zinc-800">
+<nav class="flex items-center justify-between px-8 py-6 bg-zinc-900 border-b border-zinc-800" relative>
   <a href="../index.html" class="flex items-center gap-3">
     <img alt="IMP" class="h-12 w-auto" src="../assets/imp-logo.png" />
     <span class="font-bold text-xl tracking-wide">Internet Media Providers</span></a>
@@ -40,6 +40,18 @@
     <a href="industries.html" class="hover:text-green-600 transition">Industries</a>
     <a href="about.html" class="hover:text-green-600 transition">About</a>
     <a href="join.html" class="bg-green-800 px-4 py-2 rounded font-bold hover:bg-green-700 transition">Join Now</a>
+  </div>
+
+  <button id="imp-mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="imp-mobile-menu" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-zinc-700 text-gray-200 hover:text-white hover:border-green-600 transition focus:outline-none focus:ring-2 focus:ring-green-600 relative z-50">
+    <svg id="imp-mobile-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <svg id="imp-mobile-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <div id="imp-mobile-menu" class="md:hidden absolute left-0 right-0 top-full bg-zinc-900 border-b border-zinc-800 shadow-xl z-50 hidden">
+    <a href="../pages/industries.html" class="block px-6 py-3 text-gray-200 hover:bg-zinc-800 hover:text-green-400 transition border-b border-zinc-800">Industries</a>
+    <a href="../pages/about.html" class="block px-6 py-3 text-gray-200 hover:bg-zinc-800 hover:text-green-400 transition border-b border-zinc-800">About</a>
+    <a href="../pages/team.html" class="block px-6 py-3 text-gray-200 hover:bg-zinc-800 hover:text-green-400 transition border-b border-zinc-800">Team</a>
+    <a href="../pages/contact.html" class="block px-6 py-3 text-gray-200 hover:bg-zinc-800 hover:text-green-400 transition border-b border-zinc-800">Contact</a>
+    <a href="../pages/join.html" class="block px-6 py-3 bg-green-700 hover:bg-green-600 text-white font-bold transition">Join Now</a>
   </div>
 </nav>
 
@@ -92,5 +104,52 @@
   <p>2016–2027 © Internet Media Providers — All Rights Reserved</p>
   <p class="text-xs mt-2 text-zinc-600">A division of IMP Streams Media Productions</p>
 </footer>
+
+<script>
+(function () {
+  function closeMenu() {
+    var btn = document.getElementById('imp-mobile-toggle');
+    var menu = document.getElementById('imp-mobile-menu');
+    if (!btn || !menu) return;
+    menu.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    var o = document.getElementById('imp-mobile-icon-open');
+    var c = document.getElementById('imp-mobile-icon-close');
+    if (o) o.classList.remove('hidden');
+    if (c) c.classList.add('hidden');
+  }
+  function openMenu() {
+    var btn = document.getElementById('imp-mobile-toggle');
+    var menu = document.getElementById('imp-mobile-menu');
+    if (!btn || !menu) return;
+    menu.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Close menu');
+    var o = document.getElementById('imp-mobile-icon-open');
+    var c = document.getElementById('imp-mobile-icon-close');
+    if (o) o.classList.add('hidden');
+    if (c) c.classList.remove('hidden');
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('imp-mobile-toggle');
+    var menu = document.getElementById('imp-mobile-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      if (menu.classList.contains('hidden')) openMenu();
+      else closeMenu();
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768) closeMenu();
+    });
+  });
+})();
+</script>
 </body>
 </html>
