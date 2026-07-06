@@ -161,3 +161,34 @@ body.imp-modal-open {
   margin-top: 8px;
   display: inline-block;
 }
+
+/* Mobile touch target improvements (≤ 640px) */
+@media (max-width: 640px) {
+  .imp-modal-close {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  .imp-modal-header {
+    padding: 16px 18px;
+  }
+  .imp-modal-logo {
+    height: 44px;
+  }
+  .imp-modal-title {
+    font-size: 1.05rem;
+    margin-left: 12px;
+  }
+  .imp-modal-body {
+    padding: 18px;
+  }
+  .imp-modal {
+    width: min(680px, 94vw);
+    max-height: 90vh;
+  }
+  .imp-modal-cta {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+  }
+}
