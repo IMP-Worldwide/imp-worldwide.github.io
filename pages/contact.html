@@ -29,6 +29,7 @@
   <meta name="twitter:description" content="Get in touch with the IMP team." />
   <meta name="twitter:image" content="https://internetmediaproviders.com/assets/imp-logo.png" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../assets/css/imp-modal.css" />
 </head>
 <body class="bg-black text-gray-200 font-sans">
 <nav class="flex items-center justify-between px-8 py-6 bg-zinc-900 border-b border-zinc-800" relative>
@@ -102,16 +103,385 @@
     </form>
   </div>
 
-  <h2 class="text-3xl font-black text-white mb-6">Studio Partners</h2>
-  <p class="text-gray-300 mb-6">Our national network of studio owners spans coast to coast.</p>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><h4 class="text-white font-bold mb-1">Memphis, TN (HQ)</h4><p class="text-gray-400 text-sm">Coordinating office — T.A.T. Radio origin</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><h4 class="text-white font-bold mb-1">St. Louis, MO</h4><p class="text-gray-400 text-sm">Sage Studios / New Wind</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><h4 class="text-white font-bold mb-1">Atlanta, GA</h4><p class="text-gray-400 text-sm">Fallback Productions</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><h4 class="text-white font-bold mb-1">Denver, CO</h4><p class="text-gray-400 text-sm">CTK Studios (Michael Van Lowe)</p></div>
-    <div class="bg-zinc-900 p-5 rounded-lg border border-zinc-800"><h4 class="text-white font-bold mb-1">Tampa, FL</h4><p class="text-gray-400 text-sm">N.E.W. Streaming (CeCe Shatz)</p></div>
+  <h2 class="text-3xl font-black text-white mb-3">Studio Partners</h2>
+  <p class="text-gray-300 mb-8 max-w-3xl">IMP's national network of independently-owned virtual studios — from Tennessee's coordinating office to broadcast hubs nationwide.</p>
+
+  <!-- HQ card (updated: Clarksville, TN Coordinating Office) -->
+  <div class="bg-gradient-to-r from-green-900/40 to-zinc-900 p-6 rounded-lg border border-green-700 mb-10">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl">⭐</div>
+      <div class="flex-1">
+        <div class="flex flex-wrap items-baseline gap-3 mb-1">
+          <h3 class="text-2xl font-black text-white">Clarksville, TN — Coordinating Office</h3>
+          <span class="text-xs font-bold uppercase tracking-widest text-green-400 bg-green-900/40 px-2 py-1 rounded">HQ</span>
+        </div>
+        <p class="text-gray-300 mb-2">IMP's national coordinating office, led by Co-Founder, President &amp; CTO <strong class="text-white">Cleveland Rhodes</strong>.</p>
+        <p class="text-gray-400 text-sm">Home of the IMP network operations center, partnerships desk, and broadcast engineering command. Coordinates the IMP Worldwide network with on-the-ground presence in Middle Tennessee.</p>
+      </div>
+    </div>
   </div>
+
+  <!-- US Map -->
+  <div class="bg-zinc-900 rounded-lg border border-zinc-800 p-4 sm:p-6 mb-10">
+    <h3 class="text-xl font-bold text-white mb-2 text-center">Virtual Studios Across America</h3>
+    <p class="text-gray-400 text-sm text-center mb-6">Tap a pin to view studio details. <span class="text-green-400">Green pin = Coordinating Office (HQ)</span></p>
+    <div class="relative w-full" style="aspect-ratio: 16 / 9;">
+      <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" role="img" aria-label="Map of IMP virtual studio partners across the United States">
+
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272a" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="960" height="600" fill="#0a0a0a"/>
+        <rect width="960" height="600" fill="url(#grid)"/>
+
+        <g fill="#1f2937" stroke="#374151" stroke-width="1.5">
+          <path d="M158 215 L210 195 L240 180 L275 165 L320 150 L380 140 L420 130 L470 120 L520 115 L575 110 L625 105 L675 110 L720 120 L760 140 L790 165 L820 180 L840 200 L825 215 L795 220 L745 215 L695 220 L640 230 L580 235 L520 240 L460 245 L405 245 L345 240 L290 240 L240 245 L195 250 Z"/>
+          <path d="M155 215 L145 240 L140 280 L150 310 L175 340 L185 380 L195 410 L210 445 L235 475 L265 490 L295 490 L280 460 L260 425 L240 390 L225 360 L210 325 L195 290 L180 255 L170 230 Z"/>
+          <path d="M195 250 L240 245 L290 240 L345 240 L405 245 L460 245 L520 240 L580 235 L640 230 L695 220 L745 215 L795 220 L825 215 L815 245 L795 275 L765 305 L725 325 L680 335 L630 340 L580 345 L525 350 L470 350 L420 345 L370 345 L320 345 L275 340 L235 330 L210 315 L200 285 Z"/>
+          <path d="M815 245 L840 250 L860 270 L865 295 L850 315 L820 325 L795 320 Z"/>
+          <path d="M195 410 L210 445 L235 475 L265 490 L285 510 L260 540 L215 550 L185 540 L175 510 L185 470 L195 440 Z"/>
+          <path d="M285 510 L335 510 L380 510 L425 510 L455 515 L470 540 L440 555 L390 560 L335 555 L290 545 L260 540 Z"/>
+          <path d="M470 540 L520 545 L565 545 L590 525 L580 510 L525 505 L470 515 Z"/>
+          <path d="M735 325 L770 340 L795 360 L810 385 L805 410 L780 425 L755 415 L740 390 L735 360 Z"/>
+        </g>
+
+        <!-- Compass -->
+        <g transform="translate(890, 50)" fill="#16a34a">
+          <text x="0" y="0" text-anchor="middle" font-size="14" font-weight="bold">N</text>
+          <path d="M0 5 L-4 18 L0 15 L4 18 Z"/>
+        </g>
+
+        <!-- HQ PIN (Clarksville TN) - Green star -->
+        <g transform="translate(640, 268)" class="cursor-pointer">
+          <circle r="22" fill="#16a34a" opacity="0.25" class="animate-ping"/>
+          <circle r="14" fill="#16a34a" opacity="0.45"/>
+          <path d="M0 -10 L3 -3 L10 -3 L5 2 L7 10 L0 5 L-7 10 L-5 2 L-10 -3 L-3 -3 Z" fill="#22c55e" stroke="#fff" stroke-width="1.5"/>
+          <text x="0" y="-22" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="bold">HQ · Clarksville, TN</text>
+        </g>
+        <!-- button wrapping pin so map pins open modals (visual pin only - HQ uses long-form card above) -->
+
+        <!-- St. Louis, MO (640, 270) - already shown by HQ pin - skip -->
+
+        <!-- Ferguson, MO (IMP-STL - Tara Evans) (640, 275) -->
+        <button type="button" data-modal="modal-imp-stl" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(640, 280)">
+            <circle r="10" fill="#16a34a" opacity="0.3"/>
+            <circle r="6" fill="#22c55e" stroke="#fff" stroke-width="1.5"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="bold">Ferguson, MO</text>
+          </g>
+        </button>
+
+        <!-- Denver, CO (CTK Studios - Michael Van Lowe) (370, 305) -->
+        <button type="button" data-modal="modal-ctk" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(370, 308)">
+            <circle r="10" fill="#16a34a" opacity="0.3"/>
+            <circle r="6" fill="#22c55e" stroke="#fff" stroke-width="1.5"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="bold">Denver, CO</text>
+          </g>
+        </button>
+
+        <!-- Atlanta, GA (Fallback Productions) (770, 410) -->
+        <button type="button" data-modal="modal-fallback" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(770, 410)">
+            <circle r="10" fill="#16a34a" opacity="0.3"/>
+            <circle r="6" fill="#22c55e" stroke="#fff" stroke-width="1.5"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="bold">Atlanta, GA</text>
+          </g>
+        </button>
+
+        <!-- Tampa, FL (N.E.W. Streaming) (820, 540) -->
+        <button type="button" data-modal="modal-newstreaming" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(820, 540)">
+            <circle r="10" fill="#16a34a" opacity="0.3"/>
+            <circle r="6" fill="#22c55e" stroke="#fff" stroke-width="1.5"/>
+            <text x="0" y="-12" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="bold">Tampa, FL</text>
+          </g>
+        </button>
+
+        <!-- New Wind - STL (Brian Pruitt) (645, 285) -->
+        <button type="button" data-modal="modal-newwind" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(670, 290)">
+            <circle r="8" fill="#16a34a" opacity="0.3"/>
+            <circle r="4" fill="#22c55e" stroke="#fff" stroke-width="1"/>
+            <text x="0" y="-10" text-anchor="middle" fill="#16a34a" font-size="10">New Wind</text>
+          </g>
+        </button>
+
+        <!-- Sage Studios (Melissa Coleman - STL) (635, 285) -->
+        <button type="button" data-modal="modal-sage" class="cursor-pointer" style="background:none;border:none;padding:0">
+          <g transform="translate(610, 290)">
+            <circle r="8" fill="#16a34a" opacity="0.3"/>
+            <circle r="4" fill="#22c55e" stroke="#fff" stroke-width="1"/>
+            <text x="0" y="-10" text-anchor="middle" fill="#16a34a" font-size="10">Sage</text>
+          </g>
+        </button>
+
+      </svg>
+    </div>
+  </div>
+
+  <!-- Studio Cards Grid (3-col on desktop) with modal triggers -->
+  <h3 class="text-2xl font-black text-white mb-6">All Partner Studios</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+
+    <!-- HQ Card -->
+    <button type="button" data-modal="modal-hq" class="text-left bg-gradient-to-br from-green-900/30 to-zinc-900 p-5 rounded-lg border border-green-700 hover:border-green-500 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/imp-streams-logo.webp" alt="IMP" class="h-10 w-10 object-contain"/>
+        <h4 class="text-white font-bold">Clarksville, TN</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">★ Coordinating Office</p>
+      <p class="text-gray-400 text-sm">National HQ · Cleveland Rhodes, President</p>
+    </button>
+
+    <!-- CTK Studios - Denver -->
+    <button type="button" data-modal="modal-ctk" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/ctk-radio.webp" alt="CTK Studios" class="h-10 w-10 object-contain"/>
+        <h4 class="text-white font-bold">Denver, CO</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">CTK Studios</p>
+      <p class="text-gray-400 text-sm">Michael Van Lowe · Federal Heights</p>
+    </button>
+
+    <!-- Sage Studios - STL -->
+    <button type="button" data-modal="modal-sage" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/sage-studios-logo.jpg" alt="Sage Studios" class="h-10 w-10 object-contain rounded"/>
+        <h4 class="text-white font-bold">St. Louis, MO</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">Sage Studios</p>
+      <p class="text-gray-400 text-sm">Melissa Coleman</p>
+    </button>
+
+    <!-- Fallback Productions - ATL -->
+    <button type="button" data-modal="modal-fallback" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/fallback-productions-logo.jpg" alt="Fallback Productions" class="h-10 w-10 object-contain rounded"/>
+        <h4 class="text-white font-bold">Atlanta, GA</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">Fallback Productions</p>
+      <p class="text-gray-400 text-sm">Dave &amp; Lucretia Klucken</p>
+    </button>
+
+    <!-- New Wind - STL -->
+    <button type="button" data-modal="modal-newwind" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/new-wind-logo.jpg" alt="New Wind" class="h-10 w-10 object-contain rounded"/>
+        <h4 class="text-white font-bold">St. Louis, MO</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">New Wind</p>
+      <p class="text-gray-400 text-sm">Brian Pruitt</p>
+    </button>
+
+    <!-- IMP-STL - Ferguson -->
+    <button type="button" data-modal="modal-imp-stl" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/imp-stl-logo.jpg" alt="IMP-STL" class="h-10 w-10 object-contain rounded"/>
+        <h4 class="text-white font-bold">Ferguson, MO</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">IMP-STL</p>
+      <p class="text-gray-400 text-sm">Tara Evans</p>
+    </button>
+
+    <!-- N.E.W. Streaming - Tampa -->
+    <button type="button" data-modal="modal-newstreaming" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/new-streaming-network-logo.webp" alt="N.E.W. Streaming" class="h-10 w-10 object-contain"/>
+        <h4 class="text-white font-bold">Tampa, FL</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">N.E.W. Streaming</p>
+      <p class="text-gray-400 text-sm">CeCe Shatz · VP Media Creation</p>
+    </button>
+
+    <!-- CTK Studios STL -->
+    <!-- (none yet) -->
+
+    <!-- Network pillars card -->
+    <button type="button" data-modal="modal-network-partners" class="text-left bg-zinc-900 p-5 rounded-lg border border-zinc-800 hover:border-green-700 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <img src="../assets/networks/ctk-radio.webp" alt="" class="h-10 w-10 object-contain"/>
+        <h4 class="text-white font-bold">National Networks</h4>
+      </div>
+      <p class="text-green-400 text-xs font-bold uppercase tracking-widest mb-1">5 Radio · 5 TV</p>
+      <p class="text-gray-400 text-sm">Across the IMP backbone</p>
+    </button>
+
+    <!-- Partnership CTA card -->
+    <a href="mailto:partnerships@internetmediaproviders.com" class="block bg-green-900/30 p-5 rounded-lg border border-green-800 hover:border-green-500 transition">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="h-10 w-10 flex items-center justify-center text-2xl">🤝</div>
+        <h4 class="text-white font-bold">Apply</h4>
+      </div>
+      <p class="text-green-300 text-xs font-bold uppercase tracking-widest mb-1">Become a Partner</p>
+      <p class="text-gray-300 text-sm">Open a studio with IMP →</p>
+    </a>
+
+  </div>
+
 </section>
+
+<!-- ============ Studio Modals ============ -->
+
+<!-- HQ Modal (Clarksville) -->
+<div class="imp-modal" id="modal-hq" role="dialog" aria-modal="true" aria-labelledby="modal-hq-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/imp-streams-logo.webp" alt="" class="imp-modal-logo" />
+    <h2 id="modal-hq-title" class="imp-modal-title">IMP Coordinating Office — Clarksville, TN</h2>
+    <p class="imp-modal-subtitle">⭐ National Headquarters · Manned since 2024</p>
+    <div class="imp-modal-body">
+      <p>IMP's national coordinating office in <strong>Clarksville, Tennessee</strong> is the operational command center for the entire IMP Worldwide network. From here, Cleveland Rhodes (Co-Founder, President &amp; CTO) leads network strategy, partnerships, broadcast engineering oversight, and creator-success operations.</p>
+      <p class="mt-3"><strong>What runs from Clarksville:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Network operations &amp; engineering command (AzuraCast, Viloud, Bunny.net)</li>
+        <li>Partnerships desk (studios, ad networks, distributors)</li>
+        <li>Creator success &amp; onboarding</li>
+        <li>Editorial &amp; content production</li>
+        <li>Compliance &amp; brand-safety operations</li>
+      </ul>
+      <p class="mt-3 text-gray-400 text-sm">Sits within driving distance of Nashville and the broader Middle Tennessee media corridor.</p>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com" class="imp-modal-cta">Contact HQ →</a>
+  </div>
+</div>
+
+<!-- CTK Studios Modal (Denver) -->
+<div class="imp-modal" id="modal-ctk" role="dialog" aria-modal="true" aria-labelledby="modal-ctk-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/ctk-radio.webp" alt="" class="imp-modal-logo" />
+    <h2 id="modal-ctk-title" class="imp-modal-title">CTK Studios — Denver, CO</h2>
+    <p class="imp-modal-subtitle">Federal Heights, Colorado · Co-Founder Studio</p>
+    <div class="imp-modal-body">
+      <p><strong>CTK Studios</strong> is owned by IMP Co-Founder Michael Van Lowe and serves as the network's Mountain West anchor.</p>
+      <p class="mt-3"><strong>Connected networks:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Christ The King Radio (CTK) — flagship Christian format</li>
+        <li>Rocky Mountain Jazz Worldwide (RMJ) — jazz &amp; instrumental</li>
+      </ul>
+      <p class="mt-3 text-gray-400 text-sm">Brings independent broadcasting to the Denver metro and Colorado's mountain communities.</p>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=CTK%20Studios%20Inquiry" class="imp-modal-cta">Reach CTK Studios →</a>
+  </div>
+</div>
+
+<!-- Sage Studios Modal (St. Louis) -->
+<div class="imp-modal" id="modal-sage" role="dialog" aria-modal="true" aria-labelledby="modal-sage-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/sage-studios-logo.jpg" alt="" class="imp-modal-logo" />
+    <h2 id="modal-sage-title" class="imp-modal-title">Sage Studios — St. Louis, MO</h2>
+    <p class="imp-modal-subtitle">Faith-rooted broadcasting · Operated by Melissa Coleman</p>
+    <div class="imp-modal-body">
+      <p><strong>Sage Studios</strong> anchors IMP's faith and family programming in the St. Louis metro. Operated by studio partner Melissa Coleman.</p>
+      <p class="mt-3"><strong>Programming focus:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Christian teaching &amp; gospel music</li>
+        <li>Faith-rooted talk formats</li>
+        <li>Community &amp; family content</li>
+      </ul>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=Sage%20Studios%20Inquiry" class="imp-modal-cta">Reach Sage Studios →</a>
+  </div>
+</div>
+
+<!-- Fallback Productions Modal (Atlanta) -->
+<div class="imp-modal" id="modal-fallback" role="dialog" aria-modal="true" aria-labelledby="modal-fallback-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/fallback-productions-logo.jpg" alt="" class="imp-modal-logo" />
+    <h2 id="modal-fallback-title" class="imp-modal-title">Fallback Productions — Atlanta, GA</h2>
+    <p class="imp-modal-subtitle">Southeast hub · Operated by Dave &amp; Lucretia Klucken</p>
+    <div class="imp-modal-body">
+      <p><strong>Fallback Productions</strong> powers IMP's Southeast presence from metro Atlanta. Operated by IMP studio partners Dave &amp; Lucretia Klucken.</p>
+      <p class="mt-3"><strong>Programming focus:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Urban core gospel &amp; Christian content</li>
+        <li>Talk &amp; interview formats for faith audiences</li>
+        <li>Community-impact programming across Georgia</li>
+      </ul>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=Fallback%20Productions%20Inquiry" class="imp-modal-cta">Reach Fallback →</a>
+  </div>
+</div>
+
+<!-- New Wind Modal (St. Louis) -->
+<div class="imp-modal" id="modal-newwind" role="dialog" aria-modal="true" aria-labelledby="modal-newwind-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/new-wind-logo.jpg" alt="" class="imp-modal-logo" />
+    <h2 id="modal-newwind-title" class="imp-modal-title">New Wind — St. Louis, MO</h2>
+    <p class="imp-modal-subtitle">Operated by Brian Pruitt</p>
+    <div class="imp-modal-body">
+      <p><strong>New Wind</strong> is IMP's fresh-voice studio in the St. Louis metro, operated by studio partner Brian Pruitt.</p>
+      <p class="mt-3"><strong>Programming focus:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Contemporary &amp; spirit-led music</li>
+        <li>Worship &amp; devotional formats</li>
+        <li>New-artist platform within the IMP network</li>
+      </ul>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=New%20Wind%20Inquiry" class="imp-modal-cta">Reach New Wind →</a>
+  </div>
+</div>
+
+<!-- IMP-STL Modal (Ferguson, MO) -->
+<div class="imp-modal" id="modal-imp-stl" role="dialog" aria-modal="true" aria-labelledby="modal-imp-stl-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/imp-stl-logo.jpg" alt="" class="imp-modal-logo" />
+    <h2 id="modal-imp-stl-title" class="imp-modal-title">IMP-STL — Ferguson, MO</h2>
+    <p class="imp-modal-subtitle">Operated by VP Tara Evans</p>
+    <div class="imp-modal-body">
+      <p><strong>IMP-STL</strong> is IMP's staffed studio in Ferguson, Missouri, operated by VP of Business Affairs <strong>Tara Evans</strong> — a 25-year veteran spanning real-estate and non-profit operations, founder of The Covering, and host of the nationally syndicated <em>Men's 911</em> broadcast.</p>
+      <p class="mt-3"><strong>Programming:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li><em>Men's 911</em> — nationally syndicated faith-rooted talk</li>
+        <li>Community-impact &amp; non-profit partnership content</li>
+        <li>Real-estate &amp; economic-empowerment programming</li>
+      </ul>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=IMP-STL%20Inquiry" class="imp-modal-cta">Reach IMP-STL →</a>
+  </div>
+</div>
+
+<!-- N.E.W. Streaming Modal (Tampa, FL) -->
+<div class="imp-modal" id="modal-newstreaming" role="dialog" aria-modal="true" aria-labelledby="modal-newstreaming-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <img src="../assets/networks/new-streaming-network-logo.webp" alt="" class="imp-modal-logo" />
+    <h2 id="modal-newstreaming-title" class="imp-modal-title">N.E.W. Streaming — Tampa, FL</h2>
+    <p class="imp-modal-subtitle">Operated by VP of Media Creation CeCe Shatz</p>
+    <div class="imp-modal-body">
+      <p><strong>N.E.W. Streaming</strong> serves as IMP's Gulf Coast studio, operated by VP of Media Creation <strong>CeCe Shatz</strong> — Doyenne divorce &amp; dating mentor, radio &amp; TV veteran.</p>
+      <p class="mt-3"><strong>Programming focus:</strong></p>
+      <ul class="list-disc pl-6 mt-1 space-y-1 text-gray-300">
+        <li>Women's empowerment &amp; relationships</li>
+        <li>Doyenne divorce/dating/dating-after-divorce mentoring</li>
+        <li>Lifestyle &amp; faith-rooted talk formats</li>
+      </ul>
+    </div>
+    <a href="mailto:info@internetmediaproviders.com?subject=N.E.W.%20Streaming%20Inquiry" class="imp-modal-cta">Reach N.E.W. Streaming →</a>
+  </div>
+</div>
+
+<!-- Network Partners Modal -->
+<div class="imp-modal" id="modal-network-partners" role="dialog" aria-modal="true" aria-labelledby="modal-netpartners-title">
+  <div class="imp-modal-inner">
+    <button type="button" class="imp-modal-close" aria-label="Close modal">×</button>
+    <h2 id="modal-netpartners-title" class="imp-modal-title">5 Radio + 5 TV National Networks</h2>
+    <p class="imp-modal-subtitle">Distributed across the IMP backbone</p>
+    <div class="imp-modal-body">
+      <p><strong>Radio (5):</strong> Christ The King Radio · Resilient Christian Radio Network · My Genre Radio · America's 1st Grassroots Radio · Rocky Mountain Jazz Worldwide.</p>
+      <p class="mt-3"><strong>TV (5):</strong> Christendom TV · God Family &amp; Country TV · REEL TV · Valuable TV · Urban Core Television.</p>
+      <p class="mt-3 text-gray-400 text-sm">Streamed on radio.impstreams.com (AzuraCast), Viloud TV, OTTU Media widgets, and OneStream Live — reach any screen worldwide.</p>
+    </div>
+    <a href="industries.html" class="imp-modal-cta">See All Networks →</a>
+  </div>
+</div>
 <footer class="py-8 px-8 border-t border-zinc-800 text-center text-zinc-500 text-sm">
   <div class="flex justify-center gap-6 mb-3">
     <a href="privacy.html" class="hover:text-green-400">Privacy Policy</a>
@@ -119,7 +489,7 @@
     <a href="contact.html" class="hover:text-green-400">Contact</a>
   </div>
   <p>2016–2027 © Internet Media Providers — All Rights Reserved</p>
-  <p class="text-xs mt-2 text-zinc-600">A division of IMP Streams Media Productions</p>
+  <p class="text-xs mt-2 text-zinc-600">A division of Internet Media Providers</p>
 </footer>
 
 <script>
@@ -168,5 +538,6 @@
   });
 })();
 </script>
+<script src="../assets/js/imp-modal.js"></script>
 </body>
 </html>

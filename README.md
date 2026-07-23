@@ -22,4 +22,4 @@ Official website for Internet Media Providers — virtual media broadcasting acr
 ## Maintenance
 The IMP AI team (WONG + 7 personas) maintains this site. For issues, contact info@internetmediaproviders.com.
 
-© 2026 Internet Media Providers — A division of IMP Streams Media Productions.
+© 2026 Internet Media Providers — A division of Internet Media Providers.
